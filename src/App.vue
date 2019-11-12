@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MainPage from './pages/MainPage.vue'
+import MainPage from '../src/pages/MainPage.vue'
 
 export default {
   components: {

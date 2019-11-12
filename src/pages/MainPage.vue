@@ -1,13 +1,13 @@
 <template>
-  <todo name="Melii" />
+    <todo />
 </template>
 
 <script>
 import Todo from '../components/Todo/Todo.vue'
 
 export default {
-  components: {
-    Todo
-  }
+    components: {
+        Todo
+    }
 }
 </script>

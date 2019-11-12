@@ -8,21 +8,18 @@
     <button @click="addTodo(message)">
       Add Todo
     </button>
-    <p>{{ todo }}</p>
+    <p>{{ state }}</p>
   </div>
 </template>
 
 <script>
+import store from '../../../store/sotre.js'
+
 export default {
-  props: {
-    todo: {
-      type: String,
-      required: true
-    }
-  },
   data: () => {
     return {
-      message: ''
+      message: '',
+      state: store.state.test
     }
   },
   methods: {
