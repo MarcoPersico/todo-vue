@@ -1,14 +1,13 @@
 <template>
   <div class="todo_input">
     <input
-      v-model="message"
+      v-model="currentTodo"
       type="text"
       placeholder="Add Todo"
     >
-    <button @click="addTodo(message)">
+    <button @click="addTodo(currentTodo)">
       Add Todo
     </button>
-    <p>{{ state }}</p>
   </div>
 </template>
 
@@ -18,13 +17,17 @@ import store from '../../../store/sotre.js'
 export default {
   data: () => {
     return {
-      message: '',
-      state: store.state.test
+      currentTodo: ''
+    }
+  },
+  computed: {
+    message () {
+      return store.state.count
     }
   },
   methods: {
-    addTodo: (message) => {
-      console.log(message)
+    addTodo: () => {
+      store.commit('setNewTodo')
     }
   }
 }

@@ -1,8 +1,16 @@
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-const store = new Vuex.Store ({
+Vue.use(Vuex)
+
+const store = new Vuex.Store({
   state: {
-    test: 'this is a test state'
+    todo: ''
+  },
+  mutations: {
+    setNewTodo (state) {
+      state.count++
+    }
   }
 })
 
