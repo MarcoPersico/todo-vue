@@ -1,0 +1,55 @@
+.list-todos {
+    display: grid;
+    align-self: start;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &_todo {
+        animation-name: fadeIn;
+        animation-duration: .8s;
+        height: 60px;
+        display: grid;
+        align-items: center;
+        border: 1px solid rgb(32, 121, 54);
+        border-top: none;
+        background-color: rgb(255, 255, 255);
+        
+        &:first-child {
+            border-top: 1px solid rgb(32, 121, 54); 
+            border-radius: 5px 5px 0px 0px;           
+        }
+
+        &:last-child {
+            border-radius: 0px 0px 5px 5px;             
+        }
+
+        &:only-child {
+            border-radius: 5px;
+        }
+
+        label {
+            cursor: pointer;
+            transition: all .4s;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 10% 90%;
+            align-items: center;
+
+            input {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.done {
+    text-decoration-line: line-through;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

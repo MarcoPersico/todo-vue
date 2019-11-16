@@ -1,18 +1,23 @@
 <template>
-  <div>
-    <add-todo-input />
+  <div class="todo">
+    <add-todo />
     <list-todo />
+    <clear-todo />
   </div>
 </template>
 
 <script>
-import AddTodoInput from './AddTodoInput/AddTodoInput.vue'
+import AddTodo from './AddTodoInput/AddTodo.vue'
 import ListTodo from './ListTodo/ListTodo.vue'
+import ClearTodo from './ClearTodo/ClearTodo.vue'
+
+import './Todo.scss'
 
 export default {
   components: {
-    AddTodoInput,
-    ListTodo
+    AddTodo,
+    ListTodo,
+    ClearTodo
   }
 }
 </script>
