@@ -20,8 +20,8 @@ const store = new Vuex.Store({
       })
     },
     clearDone (state) {
-      state.todo = state.todo.filter(ele => !ele.isChecked)
       state.todoDone = state.todo.filter(ele => ele.isChecked)
+      state.todo = state.todo.filter(ele => !ele.isChecked)
     }
   }
 })

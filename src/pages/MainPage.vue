@@ -12,6 +12,11 @@ import './MainPage.scss'
 export default {
   components: {
     Todo
+  },
+  data () {
+    return {
+      buttonLabels: 'clear'
+    }
   }
 }
 </script>
